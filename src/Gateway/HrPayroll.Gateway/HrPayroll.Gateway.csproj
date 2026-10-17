@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!-- The single entry point for the web and mobile apps: routes /api/* and /hubs/* to the services (YARP) and composes
+       the pages that need data from several services. -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HrPayroll.Gateway</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Yarp.ReverseProxy" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\HrPayroll.Contracts\HrPayroll.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

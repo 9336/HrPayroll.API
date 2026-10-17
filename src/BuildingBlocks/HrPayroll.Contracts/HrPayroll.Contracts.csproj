@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- What services exchange: the HTTP API models (Dtos) and the Kafka integration events (Events). No dependencies. -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HrPayroll.Contracts</RootNamespace>
+  </PropertyGroup>
+
+</Project>

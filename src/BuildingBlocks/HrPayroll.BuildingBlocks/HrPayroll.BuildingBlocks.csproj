@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    What every service has in common: JWT + permissions, error handling, the company directory copy, the Kafka
+    transactional outbox / consumer, the email outbox and the standard service setup (AddServiceDefaults).
+  -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HrPayroll.BuildingBlocks</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.16.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.*" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HrPayroll.Contracts\HrPayroll.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
